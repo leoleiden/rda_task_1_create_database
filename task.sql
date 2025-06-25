@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Customers (
 CREATE TABLE IF NOT EXISTS Orders (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     CustomerID INT,
-    OrderDate DATE NOT NULL, -- Змінено назву на OrderDate для уникнення конфлікту зі словом 'Date'
+    Date DATE NOT NULL, -- Змінено назву назад на Date, щоб відповідати test.sql
     FOREIGN KEY (CustomerID) REFERENCES Customers(ID) ON DELETE SET NULL
 );
 
